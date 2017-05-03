@@ -85,4 +85,40 @@ class GameScene: SKScene {
         let actionMoveDone = SKAction.removeFromParent()
         monster.run(SKAction.sequence([actionMove, actionMoveDone]))
     }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        // Choose one of the touches to work with
+        guard let touch = touches.first else {
+            return
+        }
+        
+        let touchLocation = touch.location(in: self)
+        
+        // Setup initial location of projectile
+        let projectile = SKSpriteNode(imageNamed: "projectile")
+        projectile.position = player.position
+        
+        // Determine offset of location to porjectile
+        let offset = touchLocation - projectile.position
+        
+        // Bail out if you are shooting down or backwards
+        if (offset.x < 0) { return }
+        
+        // Ok to now add projectile - you've double checked position
+        addChild(projectile)
+        
+        // Get the direction of where to shoot
+        let direction = offset.normalized()
+        
+        // Make it shoot far enough to be guaranteed off screen
+        let shootAmount = direction * 1000
+        
+        // Add the shoot amount to the current position
+        let realDest = projectile.position + shootAmount
+        
+        // Create the actions
+        let actionMove = SKAction.move(to: realDest, duration: 2.0)
+        let actionMoveDone = SKAction.removeFromParent()
+        projectile.run(SKAction.sequence([actionMove, actionMoveDone]))
+    }
 }
