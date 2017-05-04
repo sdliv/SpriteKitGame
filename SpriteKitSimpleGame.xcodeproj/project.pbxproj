@@ -15,6 +15,7 @@
 		141DC6041EBA1383003A0554 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 141DC6021EBA1383003A0554 /* LaunchScreen.storyboard */; };
 		141DC6131EBA2193003A0554 /* background-music-aac.caf in Resources */ = {isa = PBXBuildFile; fileRef = 141DC6111EBA2193003A0554 /* background-music-aac.caf */; };
 		141DC6141EBA2193003A0554 /* pew-pew-lei.caf in Resources */ = {isa = PBXBuildFile; fileRef = 141DC6121EBA2193003A0554 /* pew-pew-lei.caf */; };
+		14E08CA81EBA9A15001B94C0 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E08CA71EBA9A15001B94C0 /* GameOverScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		141DC6051EBA1383003A0554 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		141DC6111EBA2193003A0554 /* background-music-aac.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "background-music-aac.caf"; sourceTree = "<group>"; };
 		141DC6121EBA2193003A0554 /* pew-pew-lei.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pew-pew-lei.caf"; sourceTree = "<group>"; };
+		14E08CA71EBA9A15001B94C0 /* GameOverScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				141DC6001EBA1383003A0554 /* Assets.xcassets */,
 				141DC6021EBA1383003A0554 /* LaunchScreen.storyboard */,
 				141DC6051EBA1383003A0554 /* Info.plist */,
+				14E08CA71EBA9A15001B94C0 /* GameOverScene.swift */,
 			);
 			path = SpriteKitSimpleGame;
 			sourceTree = "<group>";
@@ -158,6 +161,7 @@
 			files = (
 				141DC5FA1EBA1383003A0554 /* GameScene.swift in Sources */,
 				141DC5FC1EBA1383003A0554 /* GameViewController.swift in Sources */,
+				14E08CA81EBA9A15001B94C0 /* GameOverScene.swift in Sources */,
 				141DC5F41EBA1383003A0554 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -322,6 +326,7 @@
 				141DC60A1EBA1383003A0554 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
